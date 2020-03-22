@@ -1,27 +1,28 @@
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
+import 'package:loginapp/CustomWidgets/custom_scaffold.dart';
 import 'package:loginapp/loginRegisterpage.dart';
-
-import 'Auth.dart';
+import 'package:loginapp/Auth.dart';
 import 'home_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
+class mapping extends StatefulWidget{
+  final  AuthImplementation  auth;
 
-class mapping_pageState extends StatefulWidget{
-final  AuthImplementation  auth;
-mapping_pageState({
-  this.auth
-});
-State<StatefulWidget> createState(){
-  return _MappingPageState();
-}
+  mapping({
+    this.auth
+  });
+  State<StatefulWidget> createState(){
+    return _MappingState();
+  }
 
 }
 enum AuthStatus{
-notSignedIn,
-signedIn,
+  notSignedIn,
+  signedIn,
 
 }
-class _MappingPageState extends State<mapping_pageState>{
+class _MappingState extends State<mapping>{
   AuthStatus authStatus = AuthStatus.notSignedIn;
   @override
   void initState(){
@@ -35,7 +36,7 @@ class _MappingPageState extends State<mapping_pageState>{
 
   }
 // ignore: non_constant_identifier_names
-void _SignedIn()
+  void _SignedIn()
   {
     setState(() {
       authStatus=AuthStatus.signedIn;
@@ -69,7 +70,7 @@ void _SignedIn()
       case AuthStatus.signedIn:
         return home_page(
           auth:widget.auth,
-          onSignIn: _SignedOut,
+          onSignOut: _SignedOut,
         );
     }
 

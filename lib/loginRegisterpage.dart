@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Auth.dart';
+
 import 'package:loginapp/Circularbuttom.dart';
-
-
+import 'package:loginapp/Auth.dart';
+import 'mapping.dart';
+import 'main.dart';
 
 
 
@@ -83,6 +84,7 @@ print("error="+ e.toString());
   Widget build(BuildContext context) {
 
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Center(child: Text("SAB KHALO"),),
         backgroundColor: Colors.red,
