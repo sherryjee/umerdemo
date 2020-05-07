@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:loginapp/CustomWidgets/circular_button.dart';
 import 'package:loginapp/popularpage/slider.dart';
 
+
 import '../global.dart';
 
 class PopularItems extends StatelessWidget {
@@ -28,6 +29,7 @@ class PopularItems extends StatelessWidget {
 
     return ListView(
           children: <Widget>[
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[

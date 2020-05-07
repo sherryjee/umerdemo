@@ -5,15 +5,12 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:loginapp/CustomWidgets/circular_button.dart';
 import 'package:loginapp/popularpage/popular_items.dart';
 import 'package:loginapp/global.dart';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:loginapp/CustomWidgets/circular_button.dart';
-
-
 import '../global.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
+import 'package:loginapp/CustomWidgets/custom_scaffold.dart';
 class slider extends StatefulWidget{
 
   _sliderState  createState() => _sliderState();
@@ -56,7 +53,7 @@ class _sliderState extends State<slider> {
       margin: EdgeInsets.only(right:10.0,left: 10.0),
       child: Carousel(
         boxFit: BoxFit.cover,
-        images: [
+        images:[
           Image.asset('images2/food1.jpeg',
             height: MediaQuery.of(context).size.height / 3.6,
             width: MediaQuery.of(context).size.width / 2.2,
@@ -90,10 +87,11 @@ class _sliderState extends State<slider> {
     );
 
 
-    return Scaffold(
-      appBar: AppBar(),
 
-      body: ListView(
+
+
+
+      return ListView(
         
         children: <Widget>[
           Row(
@@ -172,9 +170,9 @@ class _sliderState extends State<slider> {
             },
           ),
         ],
-      ),
+      );
 
-    );
+
   }
 
 

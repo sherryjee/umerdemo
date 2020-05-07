@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:loginapp/mapping.dart';
 
+
+
 abstract class  AuthImplementation
 {
   //abstarct methos
@@ -12,19 +14,16 @@ abstract class  AuthImplementation
 }
 class Auth implements AuthImplementation
 {
-
-
-
   final FirebaseAuth _firebaseAuth= FirebaseAuth.instance;
   Future <String> SignIn(String _email,String _password) async
   {
-    FirebaseUser user= (await _firebaseAuth.signInWithEmailAndPassword(email: _email, password: _password)) as FirebaseUser;
+    FirebaseUser user= (await _firebaseAuth.signInWithEmailAndPassword(email: _email, password: _password));
     return user.uid;
 
   }
   Future <String> SignUp(String _email,String _password) async
   {
-    FirebaseUser user= (await _firebaseAuth.createUserWithEmailAndPassword(email: _email, password: _password)) as FirebaseUser;
+    FirebaseUser user= (await _firebaseAuth.createUserWithEmailAndPassword(email: _email, password: _password));
     return user.uid;
   }
   Future <void> signOut() async{

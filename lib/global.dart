@@ -10,13 +10,13 @@ final double titleFontSize = 24;
 TextStyle setTextStyle(
     {color = Colors.white,
     double size = 14,
-    //family = 'Montserrat',
+    family = 'Montserrat',
     weight = FontWeight.normal}) {
   return TextStyle(
     fontWeight: weight,
     color: color,
     fontSize: size,
-    //fontFamily: family,
+    fontFamily: family,
   );
 }
 

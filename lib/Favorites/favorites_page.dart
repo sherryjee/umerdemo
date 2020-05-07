@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:loginapp/CustomWidgets/circular_button.dart';
 import 'package:loginapp/CustomWidgets/custom_scaffold.dart';
-import 'package:loginapp/counter.dart';
 import 'package:loginapp/global.dart';
 
 class FavoritesPage extends StatelessWidget {
@@ -21,7 +20,7 @@ class FavoritesPage extends StatelessWidget {
     List<Widget> gridItems = List();
     return CustomScaffold(
       index: 1,
-      title: 'Favorites',
+      title: 'SUB KHALO',
       body: ListView(
         children: <Widget>[
           Padding(
@@ -78,8 +77,8 @@ int counter =0;
               children: <Widget>[
                 Stack(
                   children: <Widget>[
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(8.0),
+                   ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
                         items[counter]['img'],
                         height: MediaQuery.of(context).size.height / 3.6,

@@ -52,12 +52,6 @@ class _MappingState extends State<mapping>{
 
   }
 
-
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
 

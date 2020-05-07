@@ -17,7 +17,7 @@ class loginRegisterPage extends StatefulWidget{
   final AuthImplementation auth;
   final VoidCallback onSignIn;
   @override
-  _loginRegisterpageState createState() => _loginRegisterpageState();
+  _loginRegisterpageState createState()=> _loginRegisterpageState();
 
 
 
@@ -53,7 +53,8 @@ if(validateandsave()){
     if(_formType==FormType.login){
       String userId = await widget.auth.SignIn(_email, _password);
       print("login user id="+ userId);
-    }else{
+    }
+    else{
       String userId = await widget.auth.SignUp(_email, _password);
       print("Reister  user id="+ userId);
     }
@@ -88,6 +89,7 @@ print("error="+ e.toString());
       appBar: AppBar(
         title: Center(child: Text("SAB KHALO"),),
         backgroundColor: Colors.red,
+
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
@@ -96,7 +98,7 @@ print("error="+ e.toString());
             
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children:Inputfields()+CreateButton(),
+              children:Inputfields() + CreateButton(),
             )),
       ),
 
@@ -106,7 +108,7 @@ print("error="+ e.toString());
   // ignore: non_constant_identifier_names
   List <Widget> Inputfields() {
     {
-      return[
+      return [
 
         SizedBox(height: 10.0,),
         logo(),
